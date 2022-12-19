@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>PinBall</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="Home.html">Home</a></h1>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menu</h2>
+							<ul class="links">
+								<li><a href="Home.html">Home</a></li>
+								<li><a href="Projects.html">Projects</a></li>
+								<li><a href="Resume.html">Resume</a></li>
+								<li><a href="#">About Me</a></li>
+							</ul>
+							<a href="#" class="close">Close</a>
+						</div>
+					</nav>
+
+				<!-- Wrapper -->
+				<section id="wrapper">
+					<header>
+						<div class="inner">
+                            <center>
+								<h2>PinBall</h2>
+                            </center>
+						</div>
+					</header>
+
+					<section>
+						<div class="wrapper style1">
+							<div class="inner">
+								<h2 class="major">What Is PinBall</h2>
+								<p>
+                                    PinBall is a versus style pinball game that takes inspiration from air hockey while keeping the pinball feel. 
+                                    The project was designed in the Unreal Engine utilizing Rider for a IDE along with Perforce for source control. 
+                                    The members of the project consisted of me, the lead programmer, and one other who handled most of the art and the initial framework of the UI.
+                                </p>
+                                <h2 class="major">What Was The Goal</h2>
+                                <p>
+                                    The goal of the project was to get a decent grasp of how Unreal’s C++ coding worked along with learning how to easily integrate it into a level with minimum work by the level designer. 
+                                    Being the main programmer in the project I wanted to focus most of my attention on building most of the mechanics in C++. 
+                                </p>
+                                <p>
+                                    Being that it was designed from pinball, the paddles were the first thing I designed. 
+                                    I wanted to make them as modular as possible, so I made a left and right paddle for both player 1 and 2.
+                                        <center>
+                                            <img src="images/PinBallPaddleCode.PNG"
+                                            width="80%">
+                                        </center>
+                                        The most time-consuming class I had to make was my InputHadler class. 
+                                        Since I had multiple different object that needed to be controlled at the same time, I had to come up with a solution to this. 
+                                        My solution was at the start of the game was to iterate through the objects and store each paddle separately and when a designated key is pressed, I would call the correct paddles rotate function.
+                                        <center>
+                                            <img src="images/PinBallKeyBoardEvents.PNG"
+                                            width="80%">
+
+                                            <img src="images/PinBallObjectIterator.PNG"
+                                            width="80%">
+
+                                            <img src="images/PinBallDemo.gif"
+                                            >
+                                        </center>
+
+
+                                </p>
+                                
+                                <h2 class="major">Challenges Face and What I learned</h2>
+								<p>
+                                    I learned a lot from this project, my biggest one was how to handle multiple inputs relatively easily. 
+                                    While I learned a lot from it, it was my biggest challenge as well requiring many hours of tinkering and researching until I decided on what it is now. 
+                                    The original goal was to have one iterator and store the paddles in an array, but the iteration and array just wouldn’t work how I wanted it to. 
+                                    Other than the InputHandler, limiting myself to almost exclusively using C++ for the project while was useful information, ultimately reduced my efficiency. 
+                                    I realized that I should start using both C++ and Blueprints in my future projects to better optimize my code along with my workload.
+                                </p>
+                            </div>
+						</div>
+					</section>
+				</section>
+
+				<!-- Footer -->
+                <section id="footer">
+                    <div class="inner">
+                        <ul class="contact">
+                            <li class="icon solid fa-phone">(740) 710-1636</li>
+                            <li class="icon solid fa-envelope"><a href="mailto:fahreradam@gmail.com">Fahreradam@gmail.com</a></li>
+                            <li class="icon brands fa-github"><a href="https://github.com/fahreradam?tab=repositories">GitHub</a></li>
+                            <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/AdamFahrer">Linkedin</a></li>
+                            <li class="icon brands fa-discord">Adamson44#1060</li>
+                        </ul>
+                        <ul class="copyright">
+                            <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                        </ul>
+                    </div>
+                </section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
