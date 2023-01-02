@@ -1,0 +1,34 @@
+12/10-11/2022
+	Created the project and wrote out the initial idea for the project.
+
+12/11/2022
+	Finished prototype for crystal
+	Started on a prototype for Warrior enemy, struggled with integrating the nav mesh and had to convert the Warrior pawn into a character.
+
+12/19/2022
+	Started on the make the UI for the shop where the player is able to select objects on the canvas and click in the world to place the items. Gettting correct mouse locations took longer than I expected and I ran through multiple iterations of the design. I finalized on using a linetracesinglebychannel to atcheive this. Currently the player is able to click on a button that will spawn a block on the players curssor and will continue to follow the currsor around and ignore collision.
+
+12/20/2022
+	Ran into a problem where I was starting to relly on my UI to handle all the input handling and had to reconfigure the gamemode to fix this. I decided to convert the gamemode into a c++ file and hand the creation of the UI through script. This allows for me to handing inputs from my inputhandler and manipulate variables of the UI easily because I now can access the game modes variable of the UI quickly through the .cpp file.
+
+	Reworked the wall and inputhandler, orginally I has ahving the wall control its possitioning with respect to the mouse, but decided to have the input handler be in charge of that to allow for the wall object to be just a simple objects with less checks.
+
+	Finished mechanic to allow player to select a wall from the shop and place it into the world, also added a cosst requirement to the object that can be see on the name along with seeing their Gem count go down.
+
+	Added archer and barracks tower to shop UI along with the ability to buy and place them.
+
+	Started on making a health bar for enemies, initial idea was to have a floating health bar. Ran into some trouble because the UI was a blueprint and the crystal was a C++ class, so because the mechanic was not a major one I decided to just have the crystals health bar attached to the screen like the shop is.
+
+12/21/2022
+	Started on making the arrow object that will be compatible with both the Archer Tower and Archer enemies once they are implemented.
+
+	Made an event for the archer tower that check the distances of all the enemies in the level and finds the nearest enemy to the crystal within a set radius.
+
+	Added the ability for the archer tower to shoot arrows at the enemies and have a semi working version of the tower leading the shoots to hit the enemies as any location.
+
+	Allowed the player to be able to click on a item in the shop and select that item even when already have a preselected item.
+
+	Warrior enemy decreses health of crystal when the AI Move To returns successfull.
+
+1/1/2023
+	Ran into a problem when trying to build the project a few days prior where the placements of object from the shop did not working in the built version but did in the editor. I narrowed down the problem that when subtracting the gem amount on the spawn of the object, the inputhandler did not have a valid reference to the player UI as it did in the editor. I concluded this was caused by using the bluprint fune get all widgets of class which I was using to get the reference origially. After a few failed attempts to fix the issue I found a working solution buy giving the input handler a UUserWidget that the player controller would set on startup after it created the player UI. This problem took more time than I sould have liked but I felt that the project is not a working project unless I am able to give a working build of it, beause of this experience I have started doing regular builds to ensure that an issue like this will be quicker to resolve in the future.

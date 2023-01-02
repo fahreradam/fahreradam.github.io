@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Tower Defence</title>
+		<title>Defender</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -44,10 +44,94 @@
 					<header>
 						<div class="inner">
                             <center>
-								<h2>Tower Defence (Still in Development)</h2>
+								<h2>Defender (Still in Development)</h2>
                             </center>
 						</div>
 					</header>
+
+					<section>
+						<div class="wrapper style1">
+							<div class="inner">
+								<h2 class="major">What Is Defender</h2>
+								<p>
+									Defender is a tower defense style game where the player is allowed to free build their base as they’d like. 
+									This is a solo project and was built in the Unreal Engine and uses a mixture of blueprints and C++ utilizing Rider as the IDE for the scripting. 
+									Currently the project is still in development and what is show here is the most recent update that I have to the project and will be updated whenever I have made ample progress until I have finished the goals I set for it.
+                                </p>
+                                <h2 class="major">What Was The Goal</h2>
+                                <p>
+									The goal for this project conveys a culmination of everything that I have learned from my Critters and Pinball projects along with further expanding my knowledge achieve fluid intermingling of blueprint and C++ code. 
+								</p>
+								<p>
+									I had a few core goals for this project, first I needed a crystal health that will be the condition whether the player has lost. 
+									I started with an actor as the crystal will not be controller and applied a mesh along with a material to it. 
+									To finish the current version of the crystal, I added a NextLevel function to reset that its health every round to allow for more enemies in rounds.
+								</p>
+								<p>
+									Next, I focused enemies, currently the close-up warrior enemy is the only one implemented, but there are plans to add an archer as well that will be ranged. 
+									The Warrior started as a character to give it the ability to use the AI move to in blueprints as it is required to path to the crystal until completion. 
+									On startup the Warrior will find the crystal in the world and then path to it and be able to path around newly placed objects because of Runtime Generation being set to dynamic. 
+									The death of the Warrior object required a bit more work, destroying the object was simple but before that I had to send a command to the Player UI to check if there are 1 or less warriors in the world to see if the round has finished.									
+									<center>
+										<img src="images/DefenderCode1.png"
+										width="50%">
+										<img src="images/DefenderCode2.png"
+										width="100%">
+									</center>
+								</p>
+								<p>
+									I wanted to have a working “shop” that will allow the player to select the object that they want and be able to place it into the world. 
+									I made a widget and name it Player UI to have it handle all interactions the player will have with the shop and it’s objects. 
+									I made the widget entirely in blueprints and currently have three buttons attached to it. 
+									These buttons correspond to each object, and they are the Wall, Archer Tower, and the Barracks. 
+									Along with these buttons I have one additional button that only appears in between arounds and can be clicked to begin the next round.
+
+									<center>
+										<video width="80%" autoplay muted controls>
+											<source src="images/TowerDefence (64-bit Development PCD3D_SM5)  2023-01-01 15-07-55.mp4" type="video/mp4">
+										</video>
+									</center>
+								</p>
+								<p>
+									To achive the placement of objects as showing the the gif I used player controller to handle wheter or not the player was inposession of an object and if they have click the mouse to either place or deselect the item.
+									
+									<center>
+										<img src="images/DefenderCode3.png"
+										width="80%">
+										<img src="images/DefenderCode4.png"
+										width="30%">
+									</center>
+								</p>
+								<p>
+									The last major object I implemented was that archer tower. 
+									The tower was designed to fire arrows at the enemies while leading the shots in the process so that they would never miss the target. 
+									This was atchieve by taking the distance between the target and the tower and adjusting the target location by accounting for the speed of the target and the arrow.
+									
+									<center>
+										<img src="images/DefenderCode5.png"
+										width="90%">
+									</center>
+								</p>
+								<h2 class="major">Challenges Faced and What I Learned</h2>
+								<p>
+									Despite having yet to be completed, this project has already possessed many challenges, one of which was the system that allowed me to select block and be placed in the correct position. 
+									I had to learn how to use line tracing to achieve an accurate depiction of where the mouse would be located compared to the floor. 
+									The biggest challenge I faced however, was completing a working build. 
+									While building the project I discovered that how I was tracking the widget for my input handler was incorrect and was only working in the editor and spent a day or two tinkering to figure out what the cause of the problem and how to devise a solution to fixing it.
+								</p>
+
+                            </div>
+							<ui class="special action">
+								<center>
+								<a href="Downloads/Defender Dev Logs.txt" class="button">
+									Devlog
+								</a>
+								</center>
+							</ui>
+
+						</div>
+					</section>
+					
 				</section>
 
 				<!-- Footer -->
