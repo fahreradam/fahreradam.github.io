@@ -60,18 +60,18 @@
                                 </p>
                                 <h2 class="major">What Was The Goal</h2>
                                 <p>
-									The goal for this project conveys a culmination of everything that I have learned from my Critters and Pinball projects along with further expanding my knowledge achieve fluid intermingling of blueprint and C++ code. 
+                                    The goal for this project conveys a culmination of everything that I have learned from my Critters and Pinball projects along with further expanding my knowledge to achieve fluid intermingling of blueprint and C++ code. 
 								</p>
 								<p>
-									I had a few core goals for this project, first I needed a crystal health that will be the condition whether the player has lost. 
-									I started with an actor as the crystal will not be controller and applied a mesh along with a material to it. 
-									To finish the current version of the crystal, I added a NextLevel function to reset that its health every round to allow for more enemies in rounds.
+                                    I had a few core goals for this project, first I needed a crystal health that will be the condition whether the player has lost. 
+                                    I started with an actor as the crystal will not be controlled and applied a mesh along with a material to it. 
+                                    To finish the current version of the crystal, I added a NextLevel function to reset its health every round to allow for more enemies in rounds.
 								</p>
 								<p>
-									Next, I focused enemies, currently the close-up warrior enemy is the only one implemented, but there are plans to add an archer as well that will be ranged. 
-									The Warrior started as a character to give it the ability to use the AI move to in blueprints as it is required to path to the crystal until completion. 
-									On startup the Warrior will find the crystal in the world and then path to it and be able to path around newly placed objects because of Runtime Generation being set to dynamic. 
-									The death of the Warrior object required a bit more work, destroying the object was simple but before that I had to send a command to the Player UI to check if there are 1 or less warriors in the world to see if the round has finished.									
+                                    Next, I focused on the enemies. Currently, the close-up warrior enemy is the only one implemented, but there are plans to add an archer as well that will be ranged. 
+                                    The Warrior started as a character to give it the ability to use the AI move to in blueprints as it is required to path to the crystal until completion. 
+                                    On startup, the Warrior will find the crystal in the world and then will path to it and be able to path around newly placed objects because of Runtime Generation being set to dynamic. 
+                                    The death of the Warrior object required a bit more work, destroying the object was simple but before that, I had to send a command to the Player UI to check if there are 1 or fewer warriors in the world to see if the round has finished.                                 
 									<center>
 										<img src="images/DefenderCode1.png"
 										width="50%">
@@ -80,11 +80,11 @@
 									</center>
 								</p>
 								<p>
-									I wanted to have a working “shop” that will allow the player to select the object that they want and be able to place it into the world. 
-									I made a widget and name it Player UI to have it handle all interactions the player will have with the shop and it’s objects. 
-									I made the widget entirely in blueprints and currently have three buttons attached to it. 
-									These buttons correspond to each object, and they are the Wall, Archer Tower, and the Barracks. 
-									Along with these buttons I have one additional button that only appears in between arounds and can be clicked to begin the next round.
+                                    I wanted to have a working “shop” that will allow the player to select the object that they want and be able to place it into the world. 
+                                    I made a widget and name it Player UI to have it handle all interactions the player will have with the shop and its objects. 
+                                    I made the widget entirely in blueprints and currently have three buttons attached to it. 
+                                    These buttons correspond to each object, and they are the Wall, Archer Tower, and Barracks. 
+                                    Along with these buttons, I have one additional button that only appears in between rounds and can be clicked to begin the next round.
 
 									<center>
 										<video width="80%" autoplay muted controls>
@@ -93,7 +93,7 @@
 									</center>
 								</p>
 								<p>
-									To achive the placement of objects as showing the the gif I used player controller to handle wheter or not the player was inposession of an object and if they have click the mouse to either place or deselect the item.
+                                    To achieve the placement of objects as shown in the gif I used the player controller to handle whether or not the player was in possession of an object and if they have clicked the mouse to either place or deselect the item.
 									
 									<center>
 										<img src="images/DefenderCode3.png"
@@ -103,9 +103,9 @@
 									</center>
 								</p>
 								<p>
-									The last major object I implemented was that archer tower. 
-									The tower was designed to fire arrows at the enemies while leading the shots in the process so that they would never miss the target. 
-									This was atchieve by taking the distance between the target and the tower and adjusting the target location by accounting for the speed of the target and the arrow.
+                                    The last major object I implemented was the archer tower. 
+                                    The tower was designed to fire arrows at the enemies while leading the shots in the process so that they would never miss the target. 
+                                    This was achieved by taking the distance between the target and the tower and adjusting the target location by accounting for the speed of the target and the arrow.
 									
 									<center>
 										<img src="images/DefenderCode5.png"
@@ -114,10 +114,10 @@
 								</p>
 								<h2 class="major">Challenges Faced and What I Learned</h2>
 								<p>
-									Despite having yet to be completed, this project has already possessed many challenges, one of which was the system that allowed me to select block and be placed in the correct position. 
-									I had to learn how to use line tracing to achieve an accurate depiction of where the mouse would be located compared to the floor. 
-									The biggest challenge I faced however, was completing a working build. 
-									While building the project I discovered that how I was tracking the widget for my input handler was incorrect and was only working in the editor and spent a day or two tinkering to figure out what the cause of the problem and how to devise a solution to fixing it.
+                                    Despite having yet to be completed, this project has already possessed many challenges, one of which was the system that allowed me to select a block and be placed in the correct position. 
+                                    I had to learn how to use line tracing to achieve an accurate depiction of where the mouse would be located compared to the floor. 
+                                    The biggest challenge I faced, however, was completing a working build. 
+                                    While building the project I discovered that how I was tracking the widget for my input handler was incorrect and was only working in the editor and spent a day or two tinkering to figure out the cause of the problem and how to devise a solution to fix it.
 								</p>
 
                             </div>
