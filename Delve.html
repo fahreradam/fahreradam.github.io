@@ -12,6 +12,27 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
+
+	<head>
+		<style>
+			#target {
+				width: 80%;
+				height: 60vh;
+				overflow-y: hidden;
+				overflow-x: hidden;
+				resize: block;
+				position: relative;
+			}
+			
+			iframe {
+				width: 100%;
+				height: 100%;
+				border: none;
+			}
+		</style>
+	 
+	</head>
+
 	<body class="is-preload">
 
 		<!-- Page Wrapper -->
@@ -55,40 +76,31 @@
 								<h2 class="major">What Is Delve</h2>
 								<p>
                                     Delve is the product of a week-long game jam with a theme of deceptions designed in the Godot engine. 
+                                    Because of the theme, my team and I decided to create a challenging platformer with hidden elements for the player to have to learn from previous deaths. 
                                     I was the designated lead and oversaw a group of 9 others to ensure a successful project by the end of the week. 
-                                    The design of the project was to make a difficult platformer with some deceptive evidence to give the player a sense of doubt where ever they went in the level. 
+                                    The design of the project was to make a difficult platformer with some deceptive evidence to give the player a sense of doubt wherever they went in the level. 
                                     I was tasked with designing the mechanical aspects of most of the interactions that the player would have within the world.
                                 </p>
-                                <h2 class="major">What Was The Goal</h2>
-                                <p>
-									The goal of the project was to accomplish at least two working levels and have the ability to make more levels relatively quickly with very modular type objects that can be placed into the level. 
-									To accomplish this, I implemented semi-solids that can work both from the top and bottom of the object. 
-									I also incorporated a multi-directional moving platform that has the ability to accelerate till a fixed point or travel linearly while moving at any angle, all controllable by the level designer.
-									<center>
-                                            <img src="images/DelveDemo.gif"
-                                            width="50%">
-                                        </center>
-                                        During the development, the level designer wanted to reward the players that decided to explore the level, so I was tasked with making a collectible that is required to be collided with two different areas to be considered picked up and added to the collectible score in the top right of the screen. 
-                                        To convey to the player that they need to pick up the item again and that they weren’t being deceived as the locations of the collectible changes, I opted for a tween effect to signify that it traveled locations, instead of being considered fake.
-                                        <center>
-                                            <img src="images/DelveCode.png"
-                                            width="50%">
-                                        </center>
-                                </p>
+
+								<div id = "target">
+									<iframe src="https://www.youtube.com/embed/hBezHNCgjx4?si=tPVw6xG8btfbJkCV"  allowfullscreen></iframe>
+								</div>
+
+								<p></p>
+
+                                <h2 class="major">What I Accomplished</h2>
+								<ul>
+									<li>Engineering lead overseeing 9 others to produce a successful product</li>
+									<li>Created a collectable to act as something to encourage exploration</li>
+									<li>Implemented multidirectional moving objects that can be freely altered by the level designer</li>
+								</ul>
                                 
-                                <h2 class="major">Challenges Faced and What I learned</h2>
+                                <h2 class="major">Challenges Faced</h2>
 								<p>
-                                    One of the biggest problems faced was allowing for just modular-style objects. 
-                                    I had to make a balance between a versatile object, while also leaving the editable variables simple enough that the level designer can perform their job quickly and efficiently. 
-                                    Another obstacle I faced was ensuring there were enough tasks for the 9 others can be occupied and efficiently using their time because of the weekly time limit.
+                                    One of the biggest challenges that I faced was allowing for modular-style objects. 
+                                    I had to discover a balance between a versatile object while also ensuring the editable properties stay simple and concise for the level designer to perform their job quickly and efficiently.
+                                    This was the first project where I was in a leadership position and had to learn how to distribute appropriate tasks as well as keeping the game scope in relation to group size.
 								</p>
-
-									<center>
-										<a href="https://github.com/fahreradam/DelveBuild" class="button">
-											Current Build
-										</a>	
-									</center>	
-
                             </div>
 						</div>
 					</section>
@@ -98,11 +110,9 @@
                 <section id="footer">
                     <div class="inner">
                         <ul class="contact">
-                            <li class="icon solid fa-phone">(740) 710-1636</li>
                             <li class="icon solid fa-envelope"><a href="mailto:fahreradam@gmail.com">Fahreradam@gmail.com</a></li>
                             <li class="icon brands fa-github"><a href="https://github.com/fahreradam?tab=repositories">GitHub</a></li>
                             <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/AdamFahrer">Linkedin</a></li>
-                            <li class="icon brands fa-discord">Adamson44#1060</li>
                         </ul>
                         <ul class="copyright">
 							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
